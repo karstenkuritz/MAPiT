@@ -3,7 +3,7 @@
 This repository contains a Matlab implementation of MAPiT for
 the transformation of pseudotime data to meaningful scales. Application cases in
 the associated manusucript "Reconstructing temporal and spatial dynamics from
-snap-shot data of heterogeneous cell populations" are
+snapshot data of heterogeneous cell populations" are
 demonstrated in example code.
 
 ## Feature overview
@@ -44,4 +44,4 @@ Workflow for analysing single-cell data with MAPiT
 
 ## Citation
 Karsten Kuritz, Daniela Stöhr, Daniela Maichl, Nadine Pollak, Markus Rehm and Frank Allgöwer. 
-*Reconstructing temporal and spatial dynamics from snap-shot data of heterogeneous cell populations*. **2019**, submitted
+*Reconstructing temporal and spatial dynamics from snapshot data of heterogeneous cell populations*. **2019**, submitted
