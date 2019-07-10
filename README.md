@@ -5,7 +5,7 @@ the transformation of pseudotime data to meaningful scales. Application cases in
 the associated manusucript "*Reconstructing temporal and spatial dynamics in single-cell experiments*" are
 demonstrated in example code.
 
-![MAPiT](/figs/MAPiT.pdf)    
+![MAPiT](/figs/MAPiT.jpg)    
 
 ## Feature overview
 MAPiT features include
@@ -43,7 +43,7 @@ Workflow for analysing single-cell data with MAPiT
 5. Transform pseudotime trajectories to new scale with [`MAPiT.m`](MAPiT.m)
 
 ## Citation
-*Reconstructing temporal and spatial dynamics in single-cell experiments*
-Karsten Kuritz, Daniela Stöhr, Daniela Maichl, Nadine Pollak, Markus Rehm, Frank Allgöwer
+*Reconstructing temporal and spatial dynamics in single-cell experiments*  
+Karsten Kuritz, Daniela Stöhr, Daniela Maichl, Nadine Pollak, Markus Rehm, Frank Allgöwer  
 bioRxiv 697151; doi: https://doi.org/10.1101/697151
  
