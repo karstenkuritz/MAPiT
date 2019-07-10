@@ -2,9 +2,10 @@
 ## MAPiT: measure-preserving *MAP* of pseudotime *i*nto true *T*ime
 This repository contains a Matlab implementation of MAPiT for
 the transformation of pseudotime data to meaningful scales. Application cases in
-the associated manusucript "Reconstructing temporal and spatial dynamics from
-snapshot data of heterogeneous cell populations" are
+the associated manusucript "*Reconstructing temporal and spatial dynamics in single-cell experiments*" are
 demonstrated in example code.
+
+![MAPiT](/figs/MAPiT.pdf)    
 
 ## Feature overview
 MAPiT features include
@@ -12,7 +13,6 @@ MAPiT features include
 * Transformation of pseudotime trajectories to real-time scales
 * Reconstruction of spatial arrangement of tumor spheroids 
 * Easy integration with pseudotime algorithms
-
 
 
 ## Installation
@@ -43,5 +43,7 @@ Workflow for analysing single-cell data with MAPiT
 5. Transform pseudotime trajectories to new scale with [`MAPiT.m`](MAPiT.m)
 
 ## Citation
-Karsten Kuritz, Daniela Stöhr, Daniela Maichl, Nadine Pollak, Markus Rehm and Frank Allgöwer. 
-*Reconstructing temporal and spatial dynamics from snapshot data of heterogeneous cell populations*. **2019**, submitted
+*Reconstructing temporal and spatial dynamics in single-cell experiments*
+Karsten Kuritz, Daniela Stöhr, Daniela Maichl, Nadine Pollak, Markus Rehm, Frank Allgöwer
+bioRxiv 697151; doi: https://doi.org/10.1101/697151
+ 
