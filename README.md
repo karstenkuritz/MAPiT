@@ -5,7 +5,7 @@ the transformation of pseudotime data to meaningful scales. Application cases in
 the associated manusucript "*Reconstructing temporal and spatial dynamics in single-cell experiments*" are
 demonstrated in example code.
 
-![MAPiT](/figs/MAPiT.jpg)    
+![MAPiT](/figs/MAPiT.png)    
 
 ## Feature overview
 MAPiT features include
