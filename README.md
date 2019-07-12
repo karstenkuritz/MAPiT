@@ -19,7 +19,7 @@ MAPiT features include
 MAPiT itself is not a software package that has to be installed, but consists of a set of Matlab scripts that have to be adapted and called within a Matlab session for each application case.
 
 MAPiT has no dependencies to other third-party Matlab interfaces/toolboxes.
-However, the examples use Wanderlust (part of the Cyt3 toolbox https://github.com/dpeerlab/cyt3) and Diffusion Maps (https://www.helmholtz-muenchen.de/icb/research/groups/machine-learning/projects/dpt/index.html) to derive pseudotime values from single-cell experimental data. 
+However, the examples use Wanderlust (part of the Cyt3 toolbox https://github.com/dpeerlab/cyt3) and Diffusion Maps (https://www.helmholtz-muenchen.de/icb/research/groups/machine-learning/projects/dpt/index.html) to derive pseudotime values from single-cell experimental data. Furthermore, kernel density estmation with linked boundary conditions (https://github.com/MColbrook/Kernel-Density-Estimation-with-Linked-BCs.git) is used to obtain distribution in pseudotime for the cell cycle example.
 
 ## Examples
 
