@@ -1,4 +1,4 @@
-function [s,y,pdf_s,p_sy] = jointDensityPseudotimeY(PT,Y,t_scale)
+function [s,y,pdf_s,p_sy,bw] = jointDensityPseudotimeY(PT,Y,t_scale)
 
 %% Joint and marginal density in Pseudotime and marker
 % This function provides the joint and marginal density of marker and

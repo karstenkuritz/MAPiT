@@ -79,8 +79,11 @@ pdf_x = 2*log(2)/T*2.^(-x./T);
 %% 3) Get joint distribution of pseudotime and markers with "jointDensityPseudotimeYpre.m"
 
 t_scale = 10^4;			% increase bandwith (by default too small)
-[s,y,pdf_s,p_sy] = jointDensityPseudotimeY(PT,Y2,t_scale);
+[s,y,pdf_s,p_sy,bw] = jointDensityPseudotimeY(PT,Y2,t_scale);
 
+% pseudotime density estimation with linked boundary condition s(0) = 2 s(1)
+r = 2;
+[pdf_s] = Cts_samples(PT,bw(1)^2,r,s,0);
 
 %% 4) Get transformation with "preMAPiT.m"
 
