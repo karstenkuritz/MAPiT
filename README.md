@@ -29,8 +29,15 @@ associated workflows for all examples presented in the manuscript.
 The examples are:
 
 - Toy example
+[`example_toy.m`](example_toy.m)
 - Cell cycle analysis
+[`example_cellcycle.m`](example_cellcycle.m)
 - Spheroid analysis
+[`example_spheroid.m`](example_spheroid.m)
+- Paper Fig 2: Cell cycle - MAPiT vs. microscopy
+[`MAPiT_CellCycle_Validation.m`](MAPiT_CellCycle_Validation.m)
+- Paper Fig 4: Spheroid - MAPiT vs. microscopy
+[`MAPiT_Spheroid_Validation.m`](MAPiT_Spheroid_Validation.m)
 
 ## Usage
 Workflow for analysing single-cell data with MAPiT
