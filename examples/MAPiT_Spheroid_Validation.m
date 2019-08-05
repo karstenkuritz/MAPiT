@@ -107,10 +107,14 @@ Ki67_column = 3;
 [pre,tau,itau] = preMAPiT(s, pdf_s, x, pdf_x);
 [p_xy, test_pdf_x] = MAPiT(s, y, p_sy, itau, pre);
 
+% normalize to the median intensity of all cells up to a distance of 150 μm from the surface
+normalization = median(data(PT<max(s(tau<150)),Ki67_column));  % median intensity 0-150 µm
+y = y - normalization;
+
 %% 4) find scaling factor by fitting median against density from MAPiT 
 % median of individual profiles
 ymedian	= nanmedian(log(y_init'));
-s0 = -5; % Starting guess
+s0 = -3; % Starting guess
 objfun = @(s) -sum(interp2(x,y,p_xy,xx,ymedian+s,'linear',eps));
 [opt_s,fval,exitflag,output] = fminunc(@(x) objfun(x),s0);
 
@@ -119,7 +123,7 @@ yy = log(y_init')+opt_s; % log(y)+s
 
 
 %% Plot results
-fh3 = figure('Color','w')
+fh3 = figure('Color','w');
 % conditional probabilty
 p_xy_conditional = p_xy./trapz(y,p_xy);
 p0 = pcolor(x,y,p_xy_conditional); shading interp
@@ -133,7 +137,7 @@ xlabel('Distance from surface')
 title('Ki-67 profiles: MAPiT vs. microscopy')
 legend([p0,p1(1),p2,p3(1)],'MAPiT','microscopy','microscopy median','microscopy quartiles')
 xlim([0,200])
-ylim([-10,-3])
+% ylim([-10,-3])
 
 
 
