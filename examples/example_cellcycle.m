@@ -96,7 +96,7 @@ r = 2;
 
 
 %% plot results
-
+figure;
 subplot(2,3,1)
 scatter(Y1,Y2,[],PT)
 h = colorbar;
@@ -105,18 +105,6 @@ xlabel('DNA')
 ylabel('log(geminin)')
 title('cell cycle data')
 
-subplot(2,3,5)
-pcolor(s,y,p_sy); shading interp
-xlabel('pseudotime')
-ylabel('log(geminin)')
-title('Trajectory in pseudotime')
-
-subplot(2,3,6)
-pcolor(x,y,p_xy); shading interp
-xlim([0, T]);
-xlabel('real-time [h]')
-ylabel('log(geminin)')
-title('Trajectory in real-time')
 
 subplot(2,3,2)
 plot(s,pdf_s)
@@ -141,3 +129,16 @@ xlim([0, T]);
 ylabel('pseudotime')
 title('Transformation \tau^{-1}(x)')
 
+subplot(2,3,5)
+pcolor(s,y,p_sy); shading interp
+xlabel('pseudotime')
+ylabel('log(geminin)')
+title('Trajectory in pseudotime')
+
+subplot(2,3,6)
+pcolor(x,y,p_xy); shading interp
+xlim([0, T]);
+ylim([-8.5, -2]);
+xlabel('real-time [h]')
+ylabel('log(geminin)')
+title('Trajectory in real-time')

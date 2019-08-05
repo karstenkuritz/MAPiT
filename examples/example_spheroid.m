@@ -58,13 +58,13 @@ data = data(rand2use,:);
 % RNA, Ki-67 and p27 to log scale
 data(:,[2, 3, 4]) = log(data(:,[2, 3, 4]));
 
-% normalize to [0, 1]
-ndata = (data - min(data)) ./ range(data);
-
-% data for pseudotime algorithm (p27, RNA, Ki-67)
-data_pt = ndata(:,[2, 3, 4]);
 
 %% 1) Generate pseudotemporal ordering of cells with your favorite algorithm
+
+% data for pseudotime algorithm (p27, RNA, Ki-67)
+data_pt = data(:,[2, 3, 4]);
+% normalize to [0, 1]
+data_pt = (data_pt - min(data_pt)) ./ range(data_pt);
 
 % wanderlust parameter
 w_param.l				= 15;
