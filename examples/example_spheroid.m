@@ -25,7 +25,7 @@ measured_states = strsplit(A.textdata{4},';');
 % Normalize, extract, etc.
 
 YoI			= {'V1 VioBlue-A','B2 PE-A','R1 APC-A','B1 FITC-A','FSC-A','SSC-A'};
-y_names		= {'DNA', 'RNA', 'Ki67', 'p27', 'FSC'};
+y_names		= {'DNA', 'RNA', 'Ki-67', 'p27', 'FSC'};
 	
 y_index = zeros(1,length(YoI));
 for i = 1:length(YoI)
@@ -98,8 +98,8 @@ pdf_x	= 3 * (radius - x).^2 ./ (radius^3 - r_N^3);
 
 % prepare figure
 a = length(y_names);
-b = 2;
-rect = [1, 1, 18, 20];
+b = 3;
+rect = [1, 1, 24, 20];
 fh1 = figure('Color','w','Units','centimeters','Position',rect);
 
 
@@ -125,18 +125,25 @@ for i = 1:length(y_names)
 	pcolor(s,y,p_sy); shading interp
 	xlabel('pseudotime')
 	ylabel(y_names{i})
-	title('Trajectory in pseudotime')
+	title('Joint density in pseudotime')
 	
 	subplot(a,b,2+(i-1)*b)
 	pcolor(x,y,p_xy); shading interp
 	xlim([0, radius]);
 	xlabel('distance from surface')
 	ylabel(y_names{i})
-	title('Trajectory on spatial scale')
+	title('Joint density on spatial scale')
+	
+	subplot(a,b,3+(i-1)*b)
+	pcolor(x,y,p_xy./trapz(y,p_xy)); shading interp
+	xlim([0, radius]);
+	xlabel('distance from surface')
+	ylabel(y_names{i})
+	title('Marginal density on spatial scale')
 end
 
 
-rect = [1, 1, 18, 10];
+rect = [1, 1, 20, 10];
 fh2 = figure('Color','w','Units','centimeters','Position',rect);
 
 subplot(1,3,1)

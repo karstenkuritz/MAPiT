@@ -90,7 +90,9 @@ yn = log(yn);
 
 %% plot results
 figure;
-pcolor(x,y,p_xy); shading interp
+% conditional probabilty
+p_xy_conditional = p_xy./trapz(y,p_xy);
+pcolor(x,y,p_xy_conditional); shading interp
 xlim([0, T]);
 ylim([-8.5, -2]);
 hold on

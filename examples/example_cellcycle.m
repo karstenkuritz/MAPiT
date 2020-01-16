@@ -97,7 +97,6 @@ r = 2;
 
 %% plot results
 figure;
-subplot(2,3,1)
 scatter(Y1,Y2,[],PT)
 h = colorbar;
 ylabel(h, 'pseudotime')
@@ -105,40 +104,51 @@ xlabel('DNA')
 ylabel('log(geminin)')
 title('cell cycle data')
 
-
-subplot(2,3,2)
+figure;
+set(gcf, 'Units', 'Normalized', 'OuterPosition', [0.1, 0.1, 0.6, 0.8]);
+subplot(2,3,1)
 plot(s,pdf_s)
 xlabel('pseudotime')
 ylabel('cell density')
 title('Cell density in pseudotime')
 
-subplot(2,3,3)
+subplot(2,3,2)
 plot(x,pdf_x)
 hold on
 % plot(xx,test_pdf_x,'--')
 xlabel('real-time [h]')
 xlim([0, T]);
-ylabel('density')
+ylabel('cell density')
 title('Cell density in real-time')
 % legend('original','transformed')
 
-subplot(2,3,4)
+subplot(2,3,3)
 scatter(interp1(s,tau,PT),PT,'.')
 xlabel('real-time [h]')
 xlim([0, T]);
 ylabel('pseudotime')
 title('Transformation \tau^{-1}(x)')
 
-subplot(2,3,5)
+subplot(2,3,4)
 pcolor(s,y,p_sy); shading interp
 xlabel('pseudotime')
 ylabel('log(geminin)')
-title('Trajectory in pseudotime')
+title('Joint density in pseudotime')
 
-subplot(2,3,6)
+subplot(2,3,5)
 pcolor(x,y,p_xy); shading interp
+% pcolor(x,y,p_xy./pdf_x); shading interp
 xlim([0, T]);
 ylim([-8.5, -2]);
 xlabel('real-time [h]')
 ylabel('log(geminin)')
-title('Trajectory in real-time')
+title('Joint density in real-time')
+
+subplot(2,3,6)
+pcolor(x,y,p_xy./trapz(y,p_xy)); shading interp
+% pcolor(x,y,p_xy./pdf_x); shading interp
+xlim([0, T]);
+ylim([-8.5, -2]);
+xlabel('real-time [h]')
+ylabel('log(geminin)')
+title('Marginal density in real-time')
