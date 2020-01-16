@@ -29,15 +29,15 @@ associated workflows for all examples presented in the manuscript.
 The examples are:
 
 - Toy example
-[`example_toy.m`](example_toy.m)
+[`example_toy.m`](/example/example_toy.m)
 - Cell cycle analysis
-[`example_cellcycle.m`](example_cellcycle.m)
+[`example_cellcycle.m`](/example/example_cellcycle.m)
 - Spheroid analysis
-[`example_spheroid.m`](example_spheroid.m)
+[`example_spheroid.m`](/example/example_spheroid.m)
 - Paper Fig 2: Cell cycle - MAPiT vs. microscopy
-[`MAPiT_CellCycle_Validation.m`](MAPiT_CellCycle_Validation.m)
+[`MAPiT_CellCycle_Validation.m`](/example/MAPiT_CellCycle_Validation.m)
 - Paper Fig 4: Spheroid - MAPiT vs. microscopy
-[`MAPiT_Spheroid_Validation.m`](MAPiT_Spheroid_Validation.m)
+[`MAPiT_Spheroid_Validation.m`](/example/MAPiT_Spheroid_Validation.m)
 
 ## Usage
 Workflow for analysing single-cell data with MAPiT
@@ -45,9 +45,16 @@ Workflow for analysing single-cell data with MAPiT
 1. Generate pseudotemporal ordering of cells with your favorite algorithm
 2. Define true-scale distribution 
 3. Get joint distribution of pseudotime and markers with
-[`jointDensityPseudotimeY.m`](jointDensityPseudotimeYpre.m)
+[`jointDensityPseudotimeY.m`](jointDensityPseudotimeY.m)
 4. Get transformation with [`preMAPiT.m`](preMAPiT.m)
 5. Transform pseudotime trajectories to new scale with [`MAPiT.m`](MAPiT.m)
+
+Usage of MAPiT with R or Python based pseudotime analysis methods is straight
+forward. Entry point of pseudotime values and single cell data is step 3. 
+The function [`jointDensityPseudotimeY.m`](jointDensityPseudotimeY.m) takes a `nx1` vector of
+pseudotime values from the pseudotime algorithm and a `nx1` vector of a marker signals from `n` single cells of the single cell
+dataset as input. These vectors, must be imported to Matlab, e.g. by importing
+ a `.csv` file.
 
 ## Citation
 *Reconstructing temporal and spatial dynamics in single-cell experiments*  
