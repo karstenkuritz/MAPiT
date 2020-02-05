@@ -61,6 +61,7 @@ dataset as input. These vectors, must be imported to Matlab, e.g. by importing
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3630379.svg)](https://doi.org/10.5281/zenodo.3630379)
 
 When using MAPiT in your project, please cite
+
 *Reconstructing temporal and spatial dynamics in single-cell experiments*  
 Karsten Kuritz, Daniela Stöhr, Daniela Maichl, Nadine Pollak, Markus Rehm, Frank Allgöwer  
 bioRxiv 697151; doi: https://doi.org/10.1101/697151
