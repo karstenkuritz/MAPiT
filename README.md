@@ -62,7 +62,8 @@ dataset as input. These vectors, must be imported to Matlab, e.g. by importing
 
 When using MAPiT in your project, please cite
 
-*Reconstructing temporal and spatial dynamics in single-cell experiments*  
+*Reconstructing temporal and spatial dynamics from single-cell pseudotime using prior knowledge of real scale cell densities*
 Karsten Kuritz, Daniela Stöhr, Daniela Maichl, Nadine Pollak, Markus Rehm, Frank Allgöwer  
-bioRxiv 697151; doi: https://doi.org/10.1101/697151
+Sci Rep 10, 3619 (2020). https://doi.org/10.1038/s41598-020-60400-z
+[![DOI:10.1038/s41598-020-60400-z](https://zenodo.org/badge/DOI/10.5281/zenodo.3630379.svg)](https://doi.org/10.1038/s41598-020-60400-z)
  
